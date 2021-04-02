@@ -1,0 +1,133 @@
+/* global remove user-agent styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* custom vars */
+:root {
+  --color-background: #121214;
+  --color-text: #D5E1E6;
+
+  --color-primary: #202024;
+  --color-secondary: #8257E5;
+  --color-secondary-hover: #8257E5;
+  
+  --color-input-background: #D5E1E6;
+  --color-button-text: #D5E1E6;
+  --color-hairline-in-dark: #4F4F5B;
+  --color-hairline-in-light: #D5E1E6;
+
+  --color-card-background: var(--color-text);
+  --color-card-title: #5A5A66;
+  --color-card-label: #BFBFCC;
+  --color-card-content: #787880;
+
+  --color-cancel: #D5E1E6;
+  --color-delete: #E83F5B; 
+  --color-save: #04D361;
+  
+  --color-badge-progress-text: var(--color-delete);
+  --color-badge-progress-background: #202024;
+  --color-badge-done-text: var(--color-save);
+  --color-badge-done-background:#202024;
+
+  --color-header-inner-title: var(--color-card-label)
+
+}
+
+/* user-agent font-size is 16px, let's make it responsive */
+@media(max-width: 1080px) {
+  html {
+    font-size: 93.75%; /* 15px */
+  }
+}
+
+@media(max-width: 970px) {
+  html {
+    font-size: 87.5%; /* 14px */
+  }
+}
+
+@media(max-width:700px) {
+  :root {
+    font-size: 75%; /* 12px */
+  }
+}
+
+@media(max-width: 590px) {
+  :root {
+    font-size: 62.25%; /* 10px */
+  }
+}
+
+
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+body{
+  background: var(--color-background);
+  width: 100%;
+  height: 100%;
+}
+
+body,
+input,
+button,
+textarea {
+  font: 500 1rem Inter;
+  color: var(--color-text);
+  border: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* basic classes */
+.container {
+  width: min(1440px, 90vw);
+  margin: 0 auto;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.separator {
+  height: 1px;
+  background-color: var(--color-primary);
+  margin: 1rem 0;
+}
+
+.separator.light {
+  background-color: var(--color-primary);
+}
+
+.flex {
+  display: flex;
+}
+
+#alert-orange{
+  width: 0.75rem;
+}
+
+#editicon{
+  width: 1.5rem;
+}
+
+#backico{
+  width: 2rem;
+}

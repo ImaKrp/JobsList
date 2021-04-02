@@ -1,0 +1,87 @@
+.button {
+  padding: 0.75rem 3rem;
+  border-radius: 0.313rem;
+  border: 0;
+
+  font-family: IBM Plex Sans;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.625rem;
+  text-transform: uppercase;
+
+  transition: all .2s;
+
+  cursor:pointer;
+
+  display: inline-flex;
+  justify-content:center;
+  align-items: center;
+}
+
+button.button {
+  line-height: 1.5rem;
+}
+
+.button.prp {
+  background: var(--color-secondary);
+  color: var(--color-text);
+}
+
+.button.prp:hover {
+  background: #6F4BC3
+}
+
+.button.purple {
+  background: var(--color-secondary);
+  color: var(--color-text);
+}
+
+.button.purple:hover {
+  background: #6F4BC3;
+}
+
+.button.gray {
+  color: var(--color-text);
+  background: var(--color-primary);
+}
+
+.button.gray:hover {
+  background: var(--color-hairline-in-dark);
+}
+
+.button.red {
+  background: var(--color-delete);
+  color: var(--color-text);
+}
+
+.button.red:hover {
+  background: #FA3F38;
+}
+
+.button.white {
+  background: #202024;
+}
+
+.button.white:hover {
+  background: #121214;
+}
+
+.button-group {
+  display: flex;
+  align-items: center;
+}
+
+.button + .button {
+  margin-left: 1rem;
+}
+
+.actions .button {
+  width: 2.5rem;
+  height: 2.5rem;
+
+  padding: 0;
+}
+
+.actions .button + button {
+  margin-left: 0.5rem;
+}

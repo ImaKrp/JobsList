@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JobList.</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#41414C" />
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/styles/part/header.css" />
+    <link rel="stylesheet" href="/styles/part/cards.css" />
+    <link rel="stylesheet" href="/styles/part/buttons.css" />
+    <link rel="stylesheet" href="/styles/part/modal.css" />
+    <link rel="stylesheet" href="/styles/part/animations.css" />
+    <link rel="stylesheet" href="/styles/pages/index.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="scripts/index.js" defer type="module"></script>
+  </head>
+  <body id="page-index">
+    <header class="page-header">
+      <div class="container">
+        <section id="top" class="animate-up">
+          <h2 class="sr-only">Homepage</h2>
+          <img id="logo" src="/images/logo.svg" alt="Logo" />
+          <a href="/profile" id="avatar-profile">
+            <p>krP <span>Profile</span></p>
+            <img
+              src="https://avatars.githubusercontent.com/u/80434144?v=4"
+            />
+          </a>
+        </section>
+
+        <div class="separator"></div>
+
+        <section id="summary" class="animate-up delay-1">
+          <h2 class="sr-only">Sumário</h2>
+
+          <div class="info">
+            <div class="total">
+              <strong>2</strong>
+              Overall Projects
+            </div>
+            <div class="in-progress">
+              <strong>1</strong>
+              In Progress
+            </div>
+            <div class="finished">
+              <strong>1</strong>
+              Dones
+            </div>
+          </div>
+          <a class="button prp" href="/job">
+            <span>
+              <img src="/images/plus-24.svg" alt="Novo Job" /> 
+            </span>
+            Add a new job
+          </a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <main class="animate-up delay-2">
+        <h1 class="sr-only">Trabalhos</h1>
+
+        <div class="cards">
+
+          <% jobs.forEach((job) => {%>
+
+            <div class="card <%= job.status %> " data-id="<%= job.id %> ">
+              <div class="id column"><<%= job.id %> ></div>
+              <div class="name column">
+                <%= job.name %> 
+              </div>
+              <div class="deadline column">
+                <span>Deadline</span>
+                <%= job.remaining >= 0? job.remaining + " Days till the deadline" : 'Ended'%> 
+              </div>
+              <div class="amount column">
+                <span>Value</span>
+                <p>$ <%= job.budget.toFixed(2) %> </p>
+              </div>
+              <div class="status badge column">
+                <%= job.status === 'done' ? 'Done' : 'In Progress'%> 
+              </div>
+              <div class="actions column flex">
+                <p class="sr-only">Ações</p>
+                <a 
+                  href="/job/edit" 
+                  class="button white edit" 
+                  title="Editar Job">
+                  <img src="/images/edit-24.svg" alt="Editar Job" id="editicon"/>
+                </a>
+                <button class="delete button white" title="Excluir Job">
+                  <img src="/images/trash-24.svg" alt="Excluir Job" />
+                </button>
+              </div>
+            </div>
+         
+          <%}) %> 
+          <!-- end card -->
+        </div>
+        <!-- end cards -->
+      </main>
+    </div>
+    <!-- end container -->
+
+    <div class="modal-wrapper">
+      <div class="modal">
+        <img src="/images/trash-48.svg" alt="Excluir Job" title="Excluir Job" />
+        <h3>Exclude Job</h3>
+        <p>Are you sure? <br/>
+        it can't be undone.  
+        <p>
+        <footer>
+          <a 
+            class="button gray" 
+            href="#">Cancel</a>
+          <button
+            class="button red"
+            type="submit"
+            form="delete-job">Exclude Job</button>
+        </footer>
+      </div>
+      <form 
+        method="post" 
+        action="/job/delete" 
+        id="delete-job"></form>
+    </div>
+    <!-- end modal-wrapper -->
+  </body>
+</html>

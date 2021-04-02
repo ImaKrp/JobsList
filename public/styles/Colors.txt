@@ -1,0 +1,9 @@
+:root{
+  --Orange: #F59519;
+  --DGray: #121214;
+  --Gray: #202024;
+  --LGray: #29292E;
+  --Text: #D5E1E6;
+  --Puple: #8257E5;
+  --FBlack: #09090A;
+}

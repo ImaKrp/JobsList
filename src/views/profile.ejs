@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <title>JobList. Profile</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#41414C" />
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/png" />
+
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/styles/part/header.css" />
+    <link rel="stylesheet" href="/styles/part/cards.css" />
+    <link rel="stylesheet" href="/styles/part/buttons.css" />
+    <link rel="stylesheet" href="/styles/part/forms.css" />
+    <link rel="stylesheet" href="/styles/part/animations.css" />
+    <link rel="stylesheet" href="/styles/pages/profile.css" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    
+  </head>
+  <body id="page-profile">
+    <%- include('parts/page-header', { title: 'My Profile'}) %> 
+    <div class="container animate-up delay-2">
+      <aside class="card">
+        <img src="<%= profile.avatar %> " alt="<%= profile.name %> ">
+        <h2><%= profile.name %> </h2>
+        <p>
+          Hour Value<br/>
+          <strong>$ 75,00</strong>
+        </p>
+        <button class="button purple" form="form-profile" type="submit">Save</button>
+      </aside>
+      <main>
+
+        <form id="form-profile">
+          <fieldset>
+            <legend>Profile Infos</legend>
+            <div class="separator light"></div>
+
+            <div class="input-group">
+              <div class="input-wrapper">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" value="<%= profile.name %>"/>
+              </div>
+
+              <div class="input-wrapper">
+                <label for="avatar">Image Link</label>
+                <input placeholder="https://" type="url" id="avatar" name="avatar" value="<%= profile.avatar %>"/>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Planing</legend>
+            <div class="separator light"> </div>
+
+            <div class="input-group">
+              <div class="input-wrapper">
+                <label for="monthly-budget">Value <br/>per month:</label>
+                <input type="amount" step="0.1" id="monthly-budget" name="monthly-budget" placeholder="R$" value="<%= profile["monthly-budget"] %>"/>
+              </div>
+
+              <div class="input-wrapper">
+                <label for="hours-per-day">Hours <br/>
+                  per day:</label>
+                <input 
+                  type="number" id="hours-per-day" name="hours-per-day" value="<%= profile["hours-per-day"] %>"/>
+              </div>
+            </div>
+
+            <div class="input-group">
+              <div class="input-wrapper">
+                <label for="days-per-week">Days <br/>per week?</label>
+                <input type="number" id="days-per-week" name="days-per-week" value="<%= profile["days-per-week"] %>"/>
+              </div>
+
+              <div class="input-wrapper">
+                <label for="vacation-per-year">Vacation weeks<br/>
+                  per year?</label>
+                <input type="number" id="vacation-per-year" name="vacation-per-year" value="<%= profile["vacation-per-year"] %>"/>
+              </div>
+            </div>
+          </fieldset>
+    
+        </form>
+      </main>
+    </div>
+    <!-- end container -->
+  </body>
+</html>
+ 
