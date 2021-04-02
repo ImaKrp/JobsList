@@ -80,7 +80,7 @@
               </div>
               <div class="deadline column">
                 <span>Deadline</span>
-                <%= job.remaining >= 0? job.remaining + " Days till the deadline" : 'Ended'%> 
+                <%= job.remaining > 0? job.remaining + " Days till the deadline" : 'Ended'%> 
               </div>
               <div class="amount column">
                 <span>Value</span>
