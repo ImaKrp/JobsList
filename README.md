@@ -17,6 +17,9 @@
 
 ### 🏠 [Homepage](https://github.com/ImaKrp/HWList)
 
+## Description
+
+First part is finally done, now i'm going to databases uhul (probally SQLite)
 
 ## Install
 [Node.js](https://nodejs.org)

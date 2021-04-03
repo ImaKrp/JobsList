@@ -30,7 +30,7 @@
           <img id="logo" src="/images/logo.svg" alt="Logo" />
           <a href="/profile" id="avatar-profile">
             <p>krP <span>Profile</span></p>
-            <img src="jobs.avatar"/>
+            <img src="https://github.com/ImaKrp.png"/>
           </a>
         </section>
 
@@ -90,7 +90,7 @@
               <div class="actions column flex">
                 <p class="sr-only">Ações</p>
                 <a 
-                  href="/job/edit" 
+                  href="/job/<%= job.id %> " 
                   class="button white edit" 
                   title="Editar Job">
                   <img src="/images/edit-24.svg" alt="Editar Job" id="editicon"/>
@@ -115,7 +115,7 @@
         <h3>Exclude Job</h3>
         <p>Are you sure? <br/>
         it can't be undone.  
-        <p>
+        </p>
         <footer>
           <a 
             class="button gray" 
