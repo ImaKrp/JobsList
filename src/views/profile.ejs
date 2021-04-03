@@ -31,7 +31,7 @@
         <h2><%= profile.name %> </h2>
         <p>
           Hour Value<br/>
-          <strong>$ 75,00</strong>
+          <strong>$ <%= profile["value-hour"].toFixed(2) %> </strong>
         </p>
         <button class="button purple" form="form-profile" type="submit">Save</button>
       </aside>

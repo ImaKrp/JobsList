@@ -30,9 +30,11 @@ const Job = {
                     ...job,
                     remaining,
                     status,
-                    budget: Profile.data["value-hour"] * job["total-hours"]
+                    budget: Profile.data["value-hour"] * job["total-hours"],
+                    avatar: Profile.data.avatar
                 }
             })
+            
             return res.render(views + "index", { jobs: updatedJobs })
         },
         save(req, res){
@@ -70,7 +72,7 @@ const Job = {
 const Profile ={
     data: {
         name: "krP",
-        avatar: "https://avatars.githubusercontent.com/u/80434144?v=4",
+        avatar: "https://github.com/ImaKrp.png",
         "monthly-budget": 300,
         "days-per-week": 5,
         "hours-per-day": 5,
@@ -83,8 +85,20 @@ const Profile ={
         },
 
         update(req, res) {
-            const calc = 52 - Profile.data["vacation-per-year"]
-            
+            const data = req.body
+            const weeksPerYears = 52
+            const weeksPerMonth = (weeksPerYears - data["vacation-per-year"])/ 12
+            const weekTotalHours = data["days-per-week"] * data["hours-per-day"]
+            const MonthlyTotalHours = weeksPerMonth * weekTotalHours
+
+            const valueHour= data["monthly-budget"] / MonthlyTotalHours
+
+            Profile.data = {
+                ...Profile.data,
+                ...req.body,
+                "value-hour": valueHour
+            }
+            return res.redirect('/profile')
         },
     },
 }
