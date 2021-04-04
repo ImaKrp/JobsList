@@ -19,7 +19,7 @@
 
 ## Description
 
-First part is finally done, now i'm going to databases uhul (probally SQLite)
+First part is finally done  ~I mean, need some fixes, but... im doing already
 
 ## Install
 [Node.js](https://nodejs.org)
