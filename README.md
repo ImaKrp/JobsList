@@ -19,7 +19,7 @@
 
 ## Description
 
-First part is finally done  ~I mean, need some fixes, but... im doing already
+First part is finally done  ~I mean, need some fixes, but... whatever
 
 ## Install
 [Node.js](https://nodejs.org)
