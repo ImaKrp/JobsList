@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to HWList. </h1>
+<h1 align="center">Welcome to JobList. </h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-0.1-blue.svg?cacheSeconds=2592000" />
   
@@ -15,7 +15,7 @@
 
 > A simple site to organize some tasks, under development
 
-### 🏠 [Homepage](https://github.com/ImaKrp/HWList)
+### 🏠 [Homepage](https://github.com/ImaKrp/JobsList)
 
 ## Description
 
