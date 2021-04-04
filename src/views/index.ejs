@@ -29,8 +29,8 @@
           <h2 class="sr-only">Homepage</h2>
           <img id="logo" src="/images/logo.svg" alt="Logo" />
           <a href="/profile" id="avatar-profile">
-            <p>krP <span>Profile</span></p>
-            <img src="https://github.com/ImaKrp.png"/>
+            <p><%= profile.name %><span>Profile</span></p>
+            <img src="<%= profile.avatar %>"/>
           </a>
         </section>
 
@@ -41,15 +41,15 @@
 
           <div class="info">
             <div class="total">
-              <strong>2</strong>
+              <strong><%= statusCount.total %></strong>
               Overall Projects
             </div>
             <div class="in-progress">
-              <strong>1</strong>
+              <strong><%= statusCount.progress %></strong>
               In Progress
             </div>
             <div class="finished">
-              <strong>1</strong>
+              <strong><%= statusCount.done %></strong>
               Dones
             </div>
           </div>
