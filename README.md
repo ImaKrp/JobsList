@@ -33,12 +33,19 @@ First part is finally done  ~I mean, need some fixes, but... whatever
 npm i
 ```
 
-
 ## Run tests
 
 Test it executing this command on terminal:
 ```sh
 npm start
+```
+And open [Localhost](http://localhost:3000)
+
+## 📑 Reseting Database 
+
+You can modify the init.js ("src/db/init.js"), delete database.sqlite and execute:
+```sh
+npm run init-db
 ```
 And open [Localhost](http://localhost:3000)
 
