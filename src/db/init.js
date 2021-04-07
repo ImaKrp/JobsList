@@ -33,25 +33,13 @@ const initDb = {
             vacation_per_year, 
             value_hour
         ) VALUES (
-            "krP",
+            "Default",
             "https://github.com/ImaKrp.png",
-            3000,
-            5,
-            5,
-            4,
-            75
-        );`)
-
-        await db.run(`INSERT INTO jobs(
-            name,
-            daily_hours,
-            total_hours,
-            created_at
-        ) VALUES (
-            "Project One",
-            2,
             1,
-            1617514376018
+            1,
+            1,
+            1,
+            1
         );`)
 
         await db.run(`INSERT INTO jobs(
@@ -60,9 +48,9 @@ const initDb = {
             total_hours,
             created_at
         ) VALUES (
-            "Second Project",
-            5,
-            40,
+            "Example",
+            1,
+            1,
             1617514376018
         );`)
 
