@@ -49,13 +49,6 @@ npm run init-db
 ```
 And open [Localhost](http://localhost:3000)
 
-## Author
-
-👤 **Júlio Carvalho Gonçalves**
-
-* Twitter: [@krpfps](https://twitter.com/krpfps)
-* Github: [@ImaKrp](https://github.com/ImaKrp)
-
 ## Support Me on GitHub
 
 Give a ⭐️ if this project helped you somehow!
